@@ -31,7 +31,7 @@ function ControllerScreen({ navigation }) {
     setHeading(heading - 1);
     console.log("좌");
     axios
-      .put("http://172.20.10.9:8080/control/direction", {
+      .post("http://172.20.10.9:8080/control/direction", {
         a: speed,
         d: heading,
       })
@@ -47,7 +47,7 @@ function ControllerScreen({ navigation }) {
     setHeading(heading + 1);
     console.log("우");
     axios
-      .put("http://172.20.10.9:8080/control/direction", {
+      .post("http://172.20.10.9:8080/control/direction", {
         a: speed,
         d: heading,
       })
@@ -63,7 +63,7 @@ function ControllerScreen({ navigation }) {
     setSpeed(speed + 1);
     console.log("상");
     axios
-      .put("http://172.20.10.9:8080/control/direction", {
+      .post("http://172.20.10.9:8080/control/direction", {
         a: speed,
         d: heading,
       })
@@ -79,7 +79,7 @@ function ControllerScreen({ navigation }) {
     setSpeed(speed - 1);
     console.log("하");
     axios
-      .put("http://172.20.10.9:8080/control/direction", {
+      .post("http://172.20.10.9:8080/control/direction", {
         a: speed,
         d: heading,
       })
